@@ -8,7 +8,7 @@ namespace ConsoleApplication1
 {
     class Program
     {
-        public static int ImputNat()//Ввод чисел
+        public static int ImputNat()//Ввод натуральных чисел
         {
             bool rightValue;
             int value;
@@ -25,7 +25,7 @@ namespace ConsoleApplication1
             return value;
         }
 
-        public static double ImputDouble()//Ввод чисел
+        public static double ImputDouble()//Ввод рациональных чисел
         {
             bool rightValue;
             double value;
@@ -53,14 +53,14 @@ namespace ConsoleApplication1
             double a;
             Random r = new Random(0);
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)//Заполнение матрицы чисел
                 for (int j = 0; j < 2 * n; j++)
                 {
                     a = r.Next(-100,100);
                     m[i, j] = a;
                 }
 
-            Console.WriteLine("Матрица чисел: ");
+            Console.WriteLine("Матрица чисел: ");//Вывод матрицы чисел
 
             for (int i = 0; i < n; i++)
             {
@@ -71,7 +71,7 @@ namespace ConsoleApplication1
 
             int[] b = new int[n];
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)//Получение матрицы рез-ов
             {
                 b[i] = 1;
                 for (int j = 0; j < 2 * n; j++)
@@ -79,7 +79,7 @@ namespace ConsoleApplication1
                         b[i] = 0;
             }
 
-            Console.WriteLine("Матрица результатов: ");
+            Console.WriteLine("Матрица результатов: ");//Вывод матрицы рез-ов
 
             for (int i = 0; i < n; i++)
                 Console.Write(b[i] + " ");
